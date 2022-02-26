@@ -1,6 +1,5 @@
-use rand_core::SeedableRng;
-
 use rand_chacha::ChaChaRng;
+use rand_core::SeedableRng;
 
 use curve25519_dalek::ristretto::CompressedRistretto;
 use curve25519_dalek::scalar::Scalar;
