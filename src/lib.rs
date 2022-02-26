@@ -1,10 +1,5 @@
 #![cfg_attr(not(feature = "std"), no_std)]
-#![cfg_attr(feature = "docs", deny(missing_docs))]
 #![cfg_attr(feature = "docs", doc = include_str!("../README.md"))]
-#![cfg_attr(
-    feature = "docs",
-    doc(html_root_url = "https://docs.rs/bulletproofs/4.0.0")
-)]
 
 extern crate alloc;
 
@@ -20,11 +15,11 @@ mod notes {
     mod r1cs_proof {}
 }
 
-mod errors;
-mod generators;
-mod inner_product_proof;
-mod range_proof;
-mod transcript;
+pub mod errors;
+pub mod generators;
+pub mod inner_product_proof;
+pub mod range_proof;
+pub mod transcript;
 
 pub use crate::errors::ProofError;
 pub use crate::generators::{BulletproofGens, BulletproofGensShare, PedersenGens};
